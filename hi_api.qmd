@@ -167,3 +167,8 @@ pip install requests
 ## The One with the Notebook
 
 See the notebook [here](https://colab.research.google.com/drive/1OFhaZaszrYfePVPEA8b8zoAY3pYAMUR3?usp=sharing) to follow along
+
+## Resources
+
++ What is an API?
+  + https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/
