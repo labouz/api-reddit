@@ -170,5 +170,7 @@ See the notebook [here](https://colab.research.google.com/drive/1OFhaZaszrYfePVP
 
 ## Resources
 
-+ What is an API?
-  + https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/
++ [What is an API?](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
+  
++ [Reddit API Documentation](https://www.reddit.com/dev/api/)
+
