@@ -1,10 +1,10 @@
 ---
 title: "Social Data Aquisition with APIs"
 author: "Layla Bouzoubaa"
-date: "April 13, 2023"
+date: "April 14, 2023"
 format:
   revealjs: 
-    theme: dark
+    theme: serif
 editor: visual
 ---
 
@@ -26,89 +26,144 @@ editor: visual
 
 -   Play time
 
-##
+## 
 
 ![](images/toystory.jpeg){fig-align="center" width="250"}
 
-
 ## Typical Data Science Pipeline
 
-
-![](images/data-science.png){fig-align="center"}
-
+![](images/data-science.png){fig-align="center" width="400"}
 
 ## Reddit
 
-- The "front page of the internet"
+-   The "front page of the internet"
 
-- Reddit has an API that allows developers to access and extract data from the platform.
+-   Reddit has an API that allows developers to access and extract data from the platform.
 
+![](images/reddit.png){fig-align="center" width="200" height="87"}
+
+::: notes
+Reddit is a popular social news aggregation and discussion website where users can post content and interact with others. In this tutorial, we will learn how to use Python to get data from Reddit using its API.
 :::
-Reddit is a popular social news aggregation and discussion website where users can post content and interact with others.
-In this tutorial, we will learn how to use Python to get data from Reddit using its API.
 
 ## What is an API?
 
- **A**pplication **P**rogram **I**nterface  
+**A**pplication **P**rogram **I**nterface
 
-allows a user to programatically pull data from a source given that source provides one  
-*ex. The NYT, Twitter, Facebook, Google, US Census*
+-   Allows a user to programatically pull data from a source given that source provides one
+    -   *ex. The NYT, Twitter, Facebook, Google, US Census*
 
-![](images/api.jpeg)
+![](images/api.jpeg){fig-align="center"}
 
+## How Does it Work?
 
-## How Does it Work? 
+-   Like a Graphical User Interface (GUI) allows you to interact with your code, an API lets your code interact with other code
+-   Set of commands, functions, objects, and protocols
 
-- Think of it like this, just like a Graphical User Interface (GUI) allows you to interact with your code, an API lets your code interact with other code 
-- Set of commands, functions, objects, and protocols
-  - used to create software or interact with an external system (databases)
-  - everywhere!
-  - convenient - eady-made code to simplify the life of a programmer
-  
-![margin:5](images/machine-learning-api.jpeg)
+![](images/machine-learning-api.jpeg)
+
+::: notes
+-   used to create software or interact with an external system (databases)
+-   convenient, ready-made code to simplify the life of a programmer
+:::
 
 ## Not Only for Getting Data
 
-- Build APIs for your ML models so others can use them
-- Write (post) to a database
-  - and update (put) and delete (delete)
-- Functions
-  - more control over what is exposed to end user
+-   Build APIs for your ML models so others can use them
+-   Write (post) to a database
+    -   and update (put) and delete (delete)
+-   Functions
+    -   more control over what is exposed to end user
 
-![scale 70%](images/api2.png)
+![](images/api2.png){fig-align="center" width="2221"}
+
+## The API
+
+-   **G**ET: used to retrieve data from the server
+
+-   **P**OST: send data to the server to create a new resource
+
+-   **P**UT: update an existing resource on the server
+
+-   **D**ELETE: delete an existing resource on the server
+
+::: notes
+-   **G**ET: used to retrieve data from the server. When a client sends a GET request, the server responds with the requested data (if it exists)
+
+-   **P**OST: send data to the server to create a new resource. For example, a client might send a POST request to create a new user account on Reddit
+
+-   **P**UT: update an existing resource on the server. For example, a client might send a PUT request to update a user's profile information
+
+-   **D**ELETE: delete an existing resource on the server. For example, a client might send a DELETE request to delete a user account
+:::
 
 ## There is this App...
 
-.pull-left[
-![scale 65%](images/tinder.png)
-]
+::: columns
+::: column
+![](images/tinder.png){height="600"}
+:::
 
-.pull-right[
-![width:500px center](images/tinder_request.png)
+::: column
+![](images/tinder_request.png){width="500"}
+:::
+:::
 
+## It's that easy?
 
-## So I Can Just Ask for Some Data, Like That?
+-   1\. You must first agree to the terms of use and obtain an API Key.
+    -   1\. This authenticates you to the server that holds the data
 
-No.  
-Well, yes....kind of:
-1. You must first agree to the terms of use and obtain and API Key.
-   1. This authenticates you to the server that holds the data
-   2. Sometimes it's simple and sometimes it's a process..be prepared 
-2. Store this key in your .Renviron
-   1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
-3. Then, run your API call
-   1. Data scientists mostly use "get" methods
-   2. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
-4. Business as normal
-   1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
-   
+    -   2\. Sometimes it's simple and sometimes it's a process...be prepared
+-   2\. Store this key in a local `.py` file
+    -   1\. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
+-   3\. Run your API call
+    -   2\. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
+
 ## Keeper of the Keys
 
-![:scale 75%](images/api_call.png) 
+![](images/api_call.png)
 
-## Let's Get Some Data pt.1
+## Understanding Reddit API
 
-##### *Source: US Census Bureau: American Community Survey*
+-   Reddit API is a RESTful API that uses HTTP requests to communicate with the server.
 
-1. Request API key ~ 24-48 hours
-   1. https://www.census.gov/developers/
+-   API endpoints are used to perform specific tasks such as getting information about a subreddit, submitting posts or comments, and searching for content.
+
+-   To access the Reddit API, we need to authenticate with our API key.
+
+## The Problem
+
+Which Friends characters are discussed more?
+
+![](images/friends.png){fig-align="center"}
+
+## The One with the Steps
+
+##### *Source: reddit.com/r/friends_tv_show*
+
+1.  Obtain Reddit API Key
+2.  Install required libraries
+    1.  [PRAW](https://praw.readthedocs.io/en/v7.7.0/)
+    2.  [requests](https://pypi.org/project/requests/)
+3.  Authenticate with Reddit
+4.  Do data science
+
+```         
+pip install praw
+pip install requests
+```
+
+::: notes
+-   PRAW is a Python Reddit API Wrapper that provides a more user-friendly interface for accessing the API.
+
+-   Requests is a Python library that allows us to send HTTP requests.
+
+-   To authenticate with the Reddit API, we need to create a Reddit instance and pass our API key and secret as arguments.
+
+-   After creating the instance, we can use it to perform various tasks such as getting information about subreddits, retrieving posts and comments, and submitting content.
+:::
+
+## The One with the Notebook
+
+See the notebook [here](https://colab.research.google.com/drive/1OFhaZaszrYfePVPEA8b8zoAY3pYAMUR3?usp=sharing) to follow along

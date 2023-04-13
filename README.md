@@ -11,6 +11,7 @@
 *Materials*:  
 
 - slides: `hi_api.qmd`
+- [notebook](https://colab.research.google.com/drive/1OFhaZaszrYfePVPEA8b8zoAY3pYAMUR3?usp=sharing)
 - `R_materials/` : if you like the R flavor, there are past lectures that I taught that covers this material and more with data from the US Census Bureau
 
 *About your speaker*:

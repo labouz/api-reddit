@@ -6,7 +6,7 @@
 <script src="hi_api_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="hi_api_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="hi_api_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="hi_api_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="hi_api_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Layla Bouzoubaa">
@@ -319,7 +319,7 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -334,7 +334,7 @@ Layla Bouzoubaa
 </div>
 </div>
 
-  <p class="date">4/13/23</p>
+  <p class="date">4/14/23</p>
 </section>
 <section id="hello" class="slide level2">
 <h2>Hello 👋🏼</h2>
@@ -358,35 +358,67 @@ Layla Bouzoubaa
 <section id="typical-data-science-pipeline" class="slide level2">
 <h2>Typical Data Science Pipeline</h2>
 
-<img data-src="images/data-science.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/data-science.png" width="400" class="r-stretch quarto-figure-center"></section>
 <section id="reddit" class="slide level2">
 <h2>Reddit</h2>
 <ul>
 <li><p>The “front page of the internet”</p></li>
 <li><p>Reddit has an API that allows developers to access and extract data from the platform.</p></li>
 </ul>
-<p>::: Reddit is a popular social news aggregation and discussion website where users can post content and interact with others. In this tutorial, we will learn how to use Python to get data from Reddit using its API.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/reddit.png" width="200" height="87"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>Reddit is a popular social news aggregation and discussion website where users can post content and interact with others. In this tutorial, we will learn how to use Python to get data from Reddit using its API.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-is-an-api" class="slide level2">
 <h2>What is an API?</h2>
 <p><strong>A</strong>pplication <strong>P</strong>rogram <strong>I</strong>nterface</p>
-<p>allows a user to programatically pull data from a source given that source provides one<br>
-<em>ex. The NYT, Twitter, Facebook, Google, US Census</em></p>
-
-<img data-src="images/api.jpeg" class="r-stretch"></section>
-<section id="how-does-it-work" class="slide level2">
-<h2>How Does it Work?</h2>
 <ul>
-<li>Think of it like this, just like a Graphical User Interface (GUI) allows you to interact with your code, an API lets your code interact with other code</li>
-<li>Set of commands, functions, objects, and protocols
+<li>Allows a user to programatically pull data from a source given that source provides one
 <ul>
-<li>used to create software or interact with an external system (databases)</li>
-<li>everywhere!</li>
-<li>convenient - eady-made code to simplify the life of a programmer</li>
+<li><em>ex. The NYT, Twitter, Facebook, Google, US Census</em></li>
 </ul></li>
 </ul>
 
-<img data-src="images/machine-learning-api.jpeg" class="r-stretch quarto-figure-center"><p class="caption">margin:5</p></section>
+<img data-src="images/api.jpeg" class="r-stretch quarto-figure-center"></section>
+<section id="how-does-it-work" class="slide level2">
+<h2>How Does it Work?</h2>
+<ul>
+<li>Like a Graphical User Interface (GUI) allows you to interact with your code, an API lets your code interact with other code</li>
+<li>Set of commands, functions, objects, and protocols</li>
+</ul>
+
+<img data-src="images/machine-learning-api.jpeg" class="r-stretch"><aside class="notes">
+<ul>
+<li>used to create software or interact with an external system (databases)</li>
+<li>convenient, ready-made code to simplify the life of a programmer</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="not-only-for-getting-data" class="slide level2">
 <h2>Not Only for Getting Data</h2>
 <ul>
@@ -401,30 +433,116 @@ Layla Bouzoubaa
 </ul></li>
 </ul>
 
-<img data-src="images/api2.png" class="r-stretch quarto-figure-center"><p class="caption">scale 70%</p></section>
+<img data-src="images/api2.png" width="2221" class="r-stretch quarto-figure-center"></section>
+<section id="the-api" class="slide level2">
+<h2>The API</h2>
+<ul>
+<li><p><strong>G</strong>ET: used to retrieve data from the server</p></li>
+<li><p><strong>P</strong>OST: send data to the server to create a new resource</p></li>
+<li><p><strong>P</strong>UT: update an existing resource on the server</p></li>
+<li><p><strong>D</strong>ELETE: delete an existing resource on the server</p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p><strong>G</strong>ET: used to retrieve data from the server. When a client sends a GET request, the server responds with the requested data (if it exists)</p></li>
+<li><p><strong>P</strong>OST: send data to the server to create a new resource. For example, a client might send a POST request to create a new user account on Reddit</p></li>
+<li><p><strong>P</strong>UT: update an existing resource on the server. For example, a client might send a PUT request to update a user’s profile information</p></li>
+<li><p><strong>D</strong>ELETE: delete an existing resource on the server. For example, a client might send a DELETE request to delete a user account</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="there-is-this-app" class="slide level2">
 <h2>There is this App…</h2>
-<p>.pull-left[ <img data-src="images/tinder.png" alt="scale 65%">]</p>
-<p>.pull-right[ <img data-src="images/tinder_request.png" alt="width:500px center"></p>
+<div class="columns">
+<div class="column">
+<p><img data-src="images/tinder.png" height="600"></p>
+</div><div class="column">
+<p><img data-src="images/tinder_request.png" width="500"></p>
+</div>
+</div>
 </section>
-<section id="so-i-can-just-ask-for-some-data-like-that" class="slide level2">
-<h2>So I Can Just Ask for Some Data, Like That?</h2>
-<p>No.<br>
-Well, yes….kind of: 1. You must first agree to the terms of use and obtain and API Key. 1. This authenticates you to the server that holds the data 2. Sometimes it’s simple and sometimes it’s a process..be prepared 2. Store this key in your .Renviron 1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️ 3. Then, run your API call 1. Data scientists mostly use “get” methods 2. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️ 4. Business as normal 1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️</p>
+<section id="its-that-easy" class="slide level2">
+<h2>It’s that easy?</h2>
+<ul>
+<li>1. You must first agree to the terms of use and obtain an API Key.
+<ul>
+<li><p>1. This authenticates you to the server that holds the data</p></li>
+<li><p>2. Sometimes it’s simple and sometimes it’s a process…be prepared</p></li>
+</ul></li>
+<li>2. Store this key in a local <code>.py</code> file
+<ul>
+<li>1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️</li>
+</ul></li>
+<li>3. Run your API call
+<ul>
+<li>2. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️</li>
+</ul></li>
+</ul>
 </section>
 <section id="keeper-of-the-keys" class="slide level2">
 <h2>Keeper of the Keys</h2>
 
-<img data-src="images/api_call.png" class="r-stretch quarto-figure-center"><p class="caption">:scale 75%</p></section>
-<section id="lets-get-some-data-pt.1" class="slide level2">
-<h2>Let’s Get Some Data pt.1</h2>
-<h5 id="source-us-census-bureau-american-community-survey"><em>Source: US Census Bureau: American Community Survey</em></h5>
+<img data-src="images/api_call.png" class="r-stretch"></section>
+<section id="understanding-reddit-api" class="slide level2">
+<h2>Understanding Reddit API</h2>
+<ul>
+<li><p>Reddit API is a RESTful API that uses HTTP requests to communicate with the server.</p></li>
+<li><p>API endpoints are used to perform specific tasks such as getting information about a subreddit, submitting posts or comments, and searching for content.</p></li>
+<li><p>To access the Reddit API, we need to authenticate with our API key.</p></li>
+</ul>
+</section>
+<section id="the-problem" class="slide level2">
+<h2>The Problem</h2>
+<p>Which Friends characters are discussed more?</p>
+
+<img data-src="images/friends.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-one-with-the-steps" class="slide level2">
+<h2>The One with the Steps</h2>
+<h5 id="source-reddit.comrfriends_tv_show"><em>Source: reddit.com/r/friends_tv_show</em></h5>
 <ol type="1">
-<li>Request API key ~ 24-48 hours
+<li>Obtain Reddit API Key</li>
+<li>Install required libraries
 <ol type="1">
-<li>https://www.census.gov/developers/</li>
+<li><a href="https://praw.readthedocs.io/en/v7.7.0/">PRAW</a></li>
+<li><a href="https://pypi.org/project/requests/">requests</a></li>
 </ol></li>
+<li>Authenticate with Reddit</li>
+<li>Do data science</li>
 </ol>
+<pre><code>pip install praw
+pip install requests</code></pre>
+<aside class="notes">
+<ul>
+<li><p>PRAW is a Python Reddit API Wrapper that provides a more user-friendly interface for accessing the API.</p></li>
+<li><p>Requests is a Python library that allows us to send HTTP requests.</p></li>
+<li><p>To authenticate with the Reddit API, we need to create a Reddit instance and pass our API key and secret as arguments.</p></li>
+<li><p>After creating the instance, we can use it to perform various tasks such as getting information about subreddits, retrieving posts and comments, and submitting content.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-one-with-the-notebook" class="slide level2">
+<h2>The One with the Notebook</h2>
+<p>See the notebook <a href="https://colab.research.google.com/drive/1OFhaZaszrYfePVPEA8b8zoAY3pYAMUR3?usp=sharing">here</a> to follow along</p>
 <div class="footer footer-default">
 
 </div>
