@@ -26,16 +26,26 @@ editor: visual
 
 -   Play time
 
-\-\--
+##
 
-class: center
+![](images/toystory.jpeg){fig-align="center" width="250"}
 
-![](images/toystory.jpeg){fig-align="center" width="400"}
 
 ## Typical Data Science Pipeline
 
+
 ![](images/data-science.png){fig-align="center"}
 
+
+## Reddit
+
+- The "front page of the internet"
+
+- Reddit has an API that allows developers to access and extract data from the platform.
+
+:::
+Reddit is a popular social news aggregation and discussion website where users can post content and interact with others.
+In this tutorial, we will learn how to use Python to get data from Reddit using its API.
 
 ## What is an API?
 
