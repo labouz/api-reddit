@@ -1,0 +1,104 @@
+---
+title: "Social Data Aquisition with APIs"
+author: "Layla Bouzoubaa"
+date: "April 13, 2023"
+format:
+  revealjs: 
+    theme: dark
+editor: visual
+---
+
+## Hello 👋🏼
+
+👩🏻‍🎓 Doctoral student, IS
+
+💊 NLP, social computing, drugs
+
+⏱️ Passionate about 🐱 👫🏻 🍷 🍣 🦪 🍵
+
+## Outline
+
+-   Introduce API
+
+-   Setup Reddit API
+
+-   Reddit API with examples
+
+-   Play time
+
+\-\--
+
+class: center
+
+![](images/toystory.jpeg){fig-align="center" width="400"}
+
+## Typical Data Science Pipeline
+
+![](images/data-science.png){fig-align="center"}
+
+
+## What is an API?
+
+ **A**pplication **P**rogram **I**nterface  
+
+allows a user to programatically pull data from a source given that source provides one  
+*ex. The NYT, Twitter, Facebook, Google, US Census*
+
+![](images/api.jpeg)
+
+
+## How Does it Work? 
+
+- Think of it like this, just like a Graphical User Interface (GUI) allows you to interact with your code, an API lets your code interact with other code 
+- Set of commands, functions, objects, and protocols
+  - used to create software or interact with an external system (databases)
+  - everywhere!
+  - convenient - eady-made code to simplify the life of a programmer
+  
+![margin:5](images/machine-learning-api.jpeg)
+
+## Not Only for Getting Data
+
+- Build APIs for your ML models so others can use them
+- Write (post) to a database
+  - and update (put) and delete (delete)
+- Functions
+  - more control over what is exposed to end user
+
+![scale 70%](images/api2.png)
+
+## There is this App...
+
+.pull-left[
+![scale 65%](images/tinder.png)
+]
+
+.pull-right[
+![width:500px center](images/tinder_request.png)
+
+
+## So I Can Just Ask for Some Data, Like That?
+
+No.  
+Well, yes....kind of:
+1. You must first agree to the terms of use and obtain and API Key.
+   1. This authenticates you to the server that holds the data
+   2. Sometimes it's simple and sometimes it's a process..be prepared 
+2. Store this key in your .Renviron
+   1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
+3. Then, run your API call
+   1. Data scientists mostly use "get" methods
+   2. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
+4. Business as normal
+   1. DO NOT SHARE/PUBLISH YOUR API KEY!! ☠️
+   
+## Keeper of the Keys
+
+![:scale 75%](images/api_call.png) 
+
+## Let's Get Some Data pt.1
+
+##### *Source: US Census Bureau: American Community Survey*
+
+1. Request API key ~ 24-48 hours
+   1. https://www.census.gov/developers/
