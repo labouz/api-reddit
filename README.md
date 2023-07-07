@@ -1,6 +1,6 @@
 # Introduction to APIs with Reddit
 ### Lecture @ Drexel University
-### April 14, 2023, 9AM
+
 
 ---
 
