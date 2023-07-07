@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Layla Bouzoubaa">
-  <title>Social Data Aquisition with APIs</title>
+  <title>Social Data Aquisition with Reddit API</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,7 +324,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Social Data Aquisition with APIs</h1>
+  <h1 class="title">Social Data Aquisition with Reddit API</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -334,7 +334,7 @@ Layla Bouzoubaa
 </div>
 </div>
 
-  <p class="date">4/14/23</p>
+  <p class="date">7/11/23</p>
 </section>
 <section id="hello" class="slide level2">
 <h2>Hello 👋🏼</h2>
@@ -579,7 +579,7 @@ pip install requests</code></pre>
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -606,7 +606,7 @@ pip install requests</code></pre>
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -731,9 +731,9 @@ pip install requests</code></pre>
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1280,
 
-        height: 700,
+        height: 720,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

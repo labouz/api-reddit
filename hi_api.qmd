@@ -1,10 +1,16 @@
 ---
-title: "Social Data Aquisition with APIs"
+title: "Social Data Aquisition with Reddit API"
 author: "Layla Bouzoubaa"
 date: "July 11, 2023"
 format:
-  revealjs: 
-    theme: serif
+    revealjs: 
+        slide-number: true
+        show-slide-number: all
+        preview-links: auto
+        width: 1280
+        height: 720
+        theme: serif
+    pdf: default
 editor: visual
 ---
 
